@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body align="center" style="background-color:black; color:white;">
+<div class="box" align="center" >
+  <h1>Movies List.....................?</h1>
+  {%  if movie_list %}
+<table border="2" style="border-collapse:collapse">
+  <thead>
+  <tr>
+    <th>rating</th><th>mname</th><th>hero</th><th>heroine</th>
+  </tr>
+  </thead>
+  {% for movie in movie_list %}
+  <tr>
+    <td>{{ movie.rating }}</td>
+    <td>{{ movie.mname }}</td>
+    <td>{{ movie.hero }}</td>
+    <td>{{ movie.heroine }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+</div>
+</body>
+</html>
